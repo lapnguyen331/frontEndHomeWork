@@ -18,6 +18,8 @@
             display: flex;
             flex-direction: row;
             background-color:#e3e3e5 ;
+            height: fit-content;
+            max-width:max-content ;
 
         }
         /* side bar */
@@ -25,7 +27,8 @@
             width: 35%;
             display: flex;
             flex-direction: column;
-            height: fit-content;
+            min-height: max-content;
+            background-color: #142336;
         }
         #side-bar .container{
             background-color: #142336;
@@ -35,7 +38,7 @@
             margin-top: 40px; 
         }
         .margin-top{
-            margin-top:40px;
+            margin-top:20px;
         }
         .avatar{
             display: flex;
@@ -152,9 +155,7 @@
         #side-bar .line{
             border-bottom: 3px solid #e3e3e5;
         }
-        #main .line{
-            border-bottom: 3px solid #142336;
-        }
+        
         .profile .line{
             width: 65%;
         }
@@ -167,9 +168,7 @@
         .connect .line{
             width: 60%;
         }
-        #main .line{
-            width: 70%;
-        }
+        
         #side-bar .content{
             margin-top: 20px;
             margin-bottom: 30px;
@@ -183,6 +182,7 @@
             flex-direction: row;
             align-items: center;
             width: 100%;
+            padding-top: 10px;
         }
         .content .icon{
             width: 40px;
@@ -232,11 +232,11 @@
             border-radius: 10em;
             background: #142336;
         }
-        progress[value]::-webkit-progress-value {
+        #side-bar progress[value]::-webkit-progress-value {
             border-radius: 10em;
             background: white;
         }
-        progress[value]::-moz-progress-bar {
+        #side-bar progress[value]::-moz-progress-bar {
             border-radius: 15em;
             background: white;
         }                  
@@ -256,7 +256,7 @@
         }
         /* main */
         #main{
-            width: 65%;
+            width: 60%;
             display: flex;
             flex-direction: column;
             height: fit-content;
@@ -266,7 +266,7 @@
         }
         #main .content {
             margin-top: 10px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             margin-left: 28px;
             font-size: 17px;
             color: #142336;
@@ -279,6 +279,9 @@
         #main .row {
             display: flex;
             flex-direction: row;
+        }
+        #main .item{
+            padding-bottom: 10px;
         }
         #main .item h3{
             font-size: 19px;
@@ -295,6 +298,54 @@
             padding-top: 5px;
             height: fit-content;
         }
+        #main .line{
+            border-bottom: 3px solid #142336;
+        }
+        #main .line{
+            width: 65%;
+        }
+        
+        #main .prof-skill .line{
+            width: 60%;
+        }
+        #main .education .line{
+            width: 80%;
+        }
+        #main .profit .line{
+            width: 75%;
+        }
+        .no-list-style{
+            list-style: none;
+            margin-top: 10px;
+        }
+        .progress{
+
+        }
+        .width-100{
+            width: 100%;
+        }
+        .width-50{
+            width:50%;
+        }
+        #main .label{
+            font-size: 14px;
+        }
+        .progress  progress[value] {
+            border: none;
+            width: 100%;
+            height: 12px;
+            margin: 0 10px;
+            border-radius: 10em;
+            background: #e3e3e5;
+        }
+        #main progress[value]::-webkit-progress-value {
+            border-radius: 10em;
+            background: #142336;
+        }
+        #main progress[value]::-moz-progress-bar {
+            border-radius: 15em;
+            background: #e3e3e5;
+        }    
 
 
 
@@ -473,11 +524,11 @@
     <section id="main">
         <div class="container">
             <!-- field -->
-            <div class="field margin-top">
+            <div class="work-experience margin-top">
                 <div class="head">
                     <div class="icon poligon">
                         <div class="poli-icon">
-                            <i class="fas fa-user"></i>
+                            <i class="fas fa-school"></i>
                         </div>
                     </div>
                     <div class="title">
@@ -524,15 +575,133 @@
                     </ul>
                 </div>
                 <!-- field -->
-                <div class="field margin-top">
+                <div class="prof-skill margin-top">
                     <div class="head">
                         <div class="icon poligon">
                             <div class="poli-icon">
-                                <i class="fas fa-user"></i>
+                                <i class="fas fa-chart-pie"></i>
                             </div>
                         </div>
                         <div class="title">
-                            <h3></h3>
+                            <h3>PROFESSIONAL SKILLS</h3>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="content row width-100">
+                        <div class="skill-list row width-50">
+                            <ul class="label col">
+                                <li class="">
+                                    <p>NET WORKING</p>
+                                </li>
+                                <li class="">
+                                    <p>WEB PROGRAMER</p>
+                                </li>
+                                <li class="">
+                                    <p>BRANDING</p>
+                                </li>
+                                
+                                
+                            </ul>
+                            <ul class="progress col width-50">
+                                <li class="no-list-style">
+                                    <progress  id="file" value="32" max="100"> 32% </progress>
+                                </li>
+                                <li class="no-list-style">
+                                    <progress id="file" value="32" max="100"> 32% </progress>
+                                </li>
+                                <li class="no-list-style">
+                                    <progress id="file" value="32" max="100"> 32% </progress>
+                                </li>
+                               
+                            </ul>
+
+                        </div>
+                        <div class="skill-list row width-50">
+                            <ul class="label col" >
+                                <li class="">
+                                    <p>GRAPHIC DESIGN</p>
+                                </li>
+                                <li class="">
+                                    <p>INTERFACE DESIGN</p>
+                                </li>
+                                <li class="">
+                                    <p>SEO</p>
+                                </li>
+                            </ul>
+                            <ul class="progress col width-50" >
+                                <li class="no-list-style">
+                                    <progress id="file" value="32" max="100"> 32% </progress>
+                                </li>
+                                <li class="no-list-style">
+                                    <progress id="file" value="32" max="100"> 32% </progress>
+                                </li>
+                                <li class="no-list-style">
+                                    <progress id="file" value="32" max="100"> 32% </progress>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                <!-- field -->
+                <div class="education margin-top">
+                    <div class="head">
+                        <div class="icon poligon">
+                            <div class="poli-icon">
+                                <i class="far fa-edit"></i>
+                            </div>
+                        </div>
+                        <div class="title">
+                            <h3>PROJECT</h3>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="content">
+                        <ul class="col">
+                            <li class="item">
+                                <h3><b>ART DIRECTOR</b>
+                                    <span>/</span>
+                                    <span>Company in LosAngeles ,2015</span>
+                                </h3>
+                                <div class="detail">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, neque ullam? Alias repellat vitae excepturi, cumque incidunt magnam dolore velit enim provident eum quod corrupti consequatur iure praesentium maiores adipisci.
+                                </div>
+                            </li>
+                            <li class="item">
+                                <h3><b>ART DIRECTOR</b>
+                                    <span>/</span>
+                                    <span>Company in LosAngeles ,2015</span>
+                                </h3>
+                                <div class="detail">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, neque ullam? Alias repellat vitae excepturi, cumque incidunt magnam dolore velit enim provident eum quod corrupti consequatur iure praesentium maiores adipisci.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, neque ullam? Alias repellat vitae excepturi, cumque incidunt magnam dolore velit enim provident eum quod corrupti consequatur iure praesentium maiores adipisci.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, neque ullam? Alias repellat vitae excepturi, cumque incidunt magnam dolore velit enim provident eum quod corrupti consequatur iure praesentium maiores adipisci.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, neque ullam? Alias repellat vitae excepturi, cumque incidunt magnam dolore velit enim provident eum quod corrupti consequatur iure praesentium maiores adipisci.
+    
+                                </div>
+                            </li>
+                            <li class="item">
+                                <h3><b>ART DIRECTOR</b>
+                                    <span>/</span>
+                                    <span>Company in LosAngeles ,2015</span>
+                                </h3>
+                                <div class="detail">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, neque ullam? Alias repellat vitae excepturi, cumque incidunt magnam dolore velit enim provident eum quod corrupti consequatur iure praesentium maiores adipisci.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, neque ullam? Alias repellat vitae excepturi, cumque incidunt magnam dolore velit enim provident eum quod corrupti consequatur iure praesentium maiores adipisci.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, neque ullam? Alias repellat vitae excepturi, cumque incidunt magnam dolore velit enim provident eum quod corrupti consequatur iure praesentium maiores adipisci.
+    
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+                <!-- field -->
+                <div class="profit margin-top">
+                    <div class="head">
+                        <div class="icon poligon">
+                            <div class="poli-icon">
+                                <i class="far fa-lightbulb"></i>
+                            </div>
+                        </div>
+                        <div class="title">
+                            <h3>PROFICIENCY</h3>
                         </div>
                         <div class="line"></div>
                     </div>
