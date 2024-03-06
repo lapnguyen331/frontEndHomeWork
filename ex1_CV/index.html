@@ -34,7 +34,7 @@
             margin-left: 50px;
             margin-top: 40px; 
         }
-        .title-top{
+        .margin-top{
             margin-top:40px;
         }
         .avatar{
@@ -48,12 +48,12 @@
         }
         /* poligon */
         .poligon {
-        display: inline-block;
-        position: relative;
-        background: white;
-        box-sizing: border-box;
-        -webkit-clip-path: polygon(92.32051% 40%, 93.79385% 43.1596%, 94.69616% 46.52704%, 95% 50%, 94.69616% 53.47296%, 93.79385% 56.8404%, 92.32051% 60%, 79.82051% 81.65064%, 77.82089% 84.50639%, 75.35575% 86.97152%, 72.5% 88.97114%, 69.3404% 90.44449%, 65.97296% 91.34679%, 62.5% 91.65064%, 37.5% 91.65064%, 34.02704% 91.34679%, 30.6596% 90.44449%, 27.5% 88.97114%, 24.64425% 86.97152%, 22.17911% 84.50639%, 20.17949% 81.65064%, 7.67949% 60%, 6.20615% 56.8404%, 5.30384% 53.47296%, 5% 50%, 5.30384% 46.52704%, 6.20615% 43.1596%, 7.67949% 40%, 20.17949% 18.34936%, 22.17911% 15.49361%, 24.64425% 13.02848%, 27.5% 11.02886%, 30.6596% 9.55551%, 34.02704% 8.65321%, 37.5% 8.34936%, 62.5% 8.34936%, 65.97296% 8.65321%, 69.3404% 9.55551%, 72.5% 11.02886%, 75.35575% 13.02848%, 77.82089% 15.49361%, 79.82051% 18.34936%);
-        clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+            display: inline-block;
+            position: relative;
+            background: white;
+            box-sizing: border-box;
+            -webkit-clip-path: polygon(92.32051% 40%, 93.79385% 43.1596%, 94.69616% 46.52704%, 95% 50%, 94.69616% 53.47296%, 93.79385% 56.8404%, 92.32051% 60%, 79.82051% 81.65064%, 77.82089% 84.50639%, 75.35575% 86.97152%, 72.5% 88.97114%, 69.3404% 90.44449%, 65.97296% 91.34679%, 62.5% 91.65064%, 37.5% 91.65064%, 34.02704% 91.34679%, 30.6596% 90.44449%, 27.5% 88.97114%, 24.64425% 86.97152%, 22.17911% 84.50639%, 20.17949% 81.65064%, 7.67949% 60%, 6.20615% 56.8404%, 5.30384% 53.47296%, 5% 50%, 5.30384% 46.52704%, 6.20615% 43.1596%, 7.67949% 40%, 20.17949% 18.34936%, 22.17911% 15.49361%, 24.64425% 13.02848%, 27.5% 11.02886%, 30.6596% 9.55551%, 34.02704% 8.65321%, 37.5% 8.34936%, 62.5% 8.34936%, 65.97296% 8.65321%, 69.3404% 9.55551%, 72.5% 11.02886%, 75.35575% 13.02848%, 77.82089% 15.49361%, 79.82051% 18.34936%);
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
         }
         .poligon img, .poli-icon{
             position: absolute;
@@ -81,47 +81,79 @@
             color: #fff;
             font-size: 24px;
         }
-        #side-bar .head{
+        #side-bar .head, #main .head{
             display: flex;
             flex-direction: row;
             align-items: center;
         }
-        #side-bar .head .icon{
+         .head .icon{
             width: 60px;
             height: 60px;
+           
+        }
+        #side-bar .head .icon {
             background-color: white;
+        }
+        #main .head .icon {
+            background-color: #142336;
         }
         
         .head .poli-icon{
-            background-color: #142336;
             top: 2px; /* equal to border thickness */
             left: 2px; /* equal to border thickness */
             width: 56px; /* container height - (border thickness * 2) */
             height: 56px; /* container height - (border thickness * 2) */
         }
+        #side-bar .poli-icon{
+            background-color: #142336;
+        }
+        #main .poli-icon{
+            background-color: #e3e3e5;
+        }
        
-        #side-bar .head .icon i {
+         .head .icon i {
             position: relative;
             top: 25%;
             left: 25%;
             font-size: 30px;
             width:100%; 
             height: 100%;
+        }
+        #side-bar .head .icon i{
             color: white;
         }
-        #side-bar .title{
-            color: white;
+        #side-bar .content i{
+            color: #142336;
+        }
+        #main .icon i {
+            color:#142336 ;
+        }
+         .title{
             font-size: 20px;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin-left: 10px;
         }
-        .title h3{
+        #side-bar .title{
+            color: white;
+        }
+        #main .title{
+            color: #142336;
+        }
+         .title h3{
             font-weight: 400;
+        }
+        #main .title h3{
+            font-weight: 600;
+        }
+         .line{
+            margin-left: 10px;
+            height: 50%;
         }
         #side-bar .line{
             border-bottom: 3px solid #e3e3e5;
-            margin-left: 10px;
-            height: 50%;
+        }
+        #main .line{
+            border-bottom: 3px solid #142336;
         }
         .profile .line{
             width: 65%;
@@ -134,6 +166,9 @@
         }
         .connect .line{
             width: 60%;
+        }
+        #main .line{
+            width: 70%;
         }
         #side-bar .content{
             margin-top: 20px;
@@ -183,7 +218,7 @@
             list-style: none;
             width: 50%;
         }
-        /* disable default css of browser */
+        /* disable default progress tag css of browser */
         progress[value] {
             -webkit-appearance:none;
             -moz-appearance:none;        
@@ -219,8 +254,18 @@
             width: 100%;
             
         }
+        /* main */
+        #main{
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+        }
+        #main .container{
+            margin-left: 30px;
+        }
+       
 
-        /* content */
     </style>
 </head>
 <body>
@@ -228,14 +273,14 @@
     <section id="side-bar">
         <div class="container">
           <div class="wrapper">
-            <div class="avatar title-top">
+            <div class="avatar margin-top">
                 <div class="avatar-image poligon">
                     <img src="./anh-cv-07.jpg" alt="">
                 </div>
                 <h3 class="name">Lap Nguyễn</h3>
                 <h4 class="job-position">Art Director</h3>
             </div>
-            <div class="profile title-top">
+            <div class="profile margin-top">
                 <div class="head">
                     <div class="icon poligon ">
                         <div class="poli-icon">
@@ -251,7 +296,7 @@
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 </div>
             </div>
-            <div class="contact title-top">
+            <div class="contact margin-top">
                 <div class="head">
                     <div class="icon poligon">
                         <div class="poli-icon">
@@ -297,7 +342,7 @@
                      </div>
                 </div>
             </div>
-            <div class="skill title-top">
+            <div class="skill margin-top">
                 <div class="head">
                     <div class="icon poligon">
                         <div class="poli-icon">
@@ -340,7 +385,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="connect title-top">
+            <div class="connect margin-top">
                 <div class="head">
                     <div class="icon poligon">
                         <div class="poli-icon">
@@ -383,16 +428,31 @@
                                 <p>https://github.com/lapnguyen331</p>
                             </div>
                         </a>
-                     </div>
-                 </div>
-            
+                    </div>
                 </div>
+            </div>
           </div>
         </div>
     </section>
     <!-- main -->
     <section id="main">
+        <div class="container">
+            <div class=" margin-top">
+                <div class="head">
+                    <div class="icon poligon">
+                        <div class="poli-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>CONTACT ME</h3>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="content">
 
+                </div>
+        </div>
     </section>
 </body>
 </html>
