@@ -1,0 +1,398 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+
+
+    <style>
+        /* reset css */
+        *{
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: row;
+            background-color:#e3e3e5 ;
+
+        }
+        /* side bar */
+        #side-bar{
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+        }
+        #side-bar .container{
+            background-color: #142336;
+        }
+        #side-bar .wrapper{
+            margin-left: 50px;
+            margin-top: 40px; 
+        }
+        .title-top{
+            margin-top:40px;
+        }
+        .avatar{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .avatar-image{
+            width: 150px;
+            height: 150px;
+        }
+        /* poligon */
+        .poligon {
+        display: inline-block;
+        position: relative;
+        background: white;
+        box-sizing: border-box;
+        -webkit-clip-path: polygon(92.32051% 40%, 93.79385% 43.1596%, 94.69616% 46.52704%, 95% 50%, 94.69616% 53.47296%, 93.79385% 56.8404%, 92.32051% 60%, 79.82051% 81.65064%, 77.82089% 84.50639%, 75.35575% 86.97152%, 72.5% 88.97114%, 69.3404% 90.44449%, 65.97296% 91.34679%, 62.5% 91.65064%, 37.5% 91.65064%, 34.02704% 91.34679%, 30.6596% 90.44449%, 27.5% 88.97114%, 24.64425% 86.97152%, 22.17911% 84.50639%, 20.17949% 81.65064%, 7.67949% 60%, 6.20615% 56.8404%, 5.30384% 53.47296%, 5% 50%, 5.30384% 46.52704%, 6.20615% 43.1596%, 7.67949% 40%, 20.17949% 18.34936%, 22.17911% 15.49361%, 24.64425% 13.02848%, 27.5% 11.02886%, 30.6596% 9.55551%, 34.02704% 8.65321%, 37.5% 8.34936%, 62.5% 8.34936%, 65.97296% 8.65321%, 69.3404% 9.55551%, 72.5% 11.02886%, 75.35575% 13.02848%, 77.82089% 15.49361%, 79.82051% 18.34936%);
+        clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+        }
+        .poligon img, .poli-icon{
+            position: absolute;
+            -webkit-clip-path: polygon(92.32051% 40%, 93.79385% 43.1596%, 94.69616% 46.52704%, 95% 50%, 94.69616% 53.47296%, 93.79385% 56.8404%, 92.32051% 60%, 79.82051% 81.65064%, 77.82089% 84.50639%, 75.35575% 86.97152%, 72.5% 88.97114%, 69.3404% 90.44449%, 65.97296% 91.34679%, 62.5% 91.65064%, 37.5% 91.65064%, 34.02704% 91.34679%, 30.6596% 90.44449%, 27.5% 88.97114%, 24.64425% 86.97152%, 22.17911% 84.50639%, 20.17949% 81.65064%, 7.67949% 60%, 6.20615% 56.8404%, 5.30384% 53.47296%, 5% 50%, 5.30384% 46.52704%, 6.20615% 43.1596%, 7.67949% 40%, 20.17949% 18.34936%, 22.17911% 15.49361%, 24.64425% 13.02848%, 27.5% 11.02886%, 30.6596% 9.55551%, 34.02704% 8.65321%, 37.5% 8.34936%, 62.5% 8.34936%, 65.97296% 8.65321%, 69.3404% 9.55551%, 72.5% 11.02886%, 75.35575% 13.02848%, 77.82089% 15.49361%, 79.82051% 18.34936%);
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+        }
+        
+        .avatar-image img {
+            top: 2px; /* equal to border thickness */
+            left: 2px; /* equal to border thickness */
+            width: 146px; /* container height - (border thickness * 2) */
+            height: 146px; /* container height - (border thickness * 2) */
+        }
+
+        .name{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 300;
+            color: #fff;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+        .job-position{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            color: #fff;
+            font-size: 24px;
+        }
+        #side-bar .head{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        #side-bar .head .icon{
+            width: 60px;
+            height: 60px;
+            background-color: white;
+        }
+        
+        .head .poli-icon{
+            background-color: #142336;
+            top: 2px; /* equal to border thickness */
+            left: 2px; /* equal to border thickness */
+            width: 56px; /* container height - (border thickness * 2) */
+            height: 56px; /* container height - (border thickness * 2) */
+        }
+       
+        #side-bar .head .icon i {
+            position: relative;
+            top: 25%;
+            left: 25%;
+            font-size: 30px;
+            width:100%; 
+            height: 100%;
+            color: white;
+        }
+        #side-bar .title{
+            color: white;
+            font-size: 20px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 10px;
+        }
+        .title h3{
+            font-weight: 400;
+        }
+        #side-bar .line{
+            border-bottom: 3px solid #e3e3e5;
+            margin-left: 10px;
+            height: 50%;
+        }
+        .profile .line{
+            width: 65%;
+        }
+        .contact .line{
+            width: 45%;
+        }
+        .skill .line{
+            width: 44%;
+        }
+        .connect .line{
+            width: 60%;
+        }
+        #side-bar .content{
+            margin-top: 20px;
+            margin-bottom: 30px;
+            margin-left: 28px;
+            font-size: 17px;
+            color: #a9a9ae;
+        }
+       
+        .phone, .email,.website,.address,.social{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+        }
+        .content .icon{
+            width: 40px;
+            height: 40px;
+            background-color: white;
+        }
+       
+        .content .icon i{
+            position: relative;
+            top: 20%;
+            left: 25%;
+            font-size: 25px;
+            width:100%; 
+            height: 100%;
+            color: black;
+        }
+
+        .contact .detail{
+            margin-left: 20px;
+            font-size: 17px;
+            color: #a9a9ae;
+            width: 90%;
+        }
+        .skill .content {
+            display: flex;
+            flex-direction: row;
+
+        }
+        .skill .content li {
+            margin-bottom: 10px;
+        }
+        .skill .proccess{
+            list-style: none;
+            width: 50%;
+        }
+        /* disable default css of browser */
+        progress[value] {
+            -webkit-appearance:none;
+            -moz-appearance:none;        
+             appearance: none;
+        }
+        .skill  progress[value] {
+            border: none;
+            width: 100%;
+            height: 10px;
+            margin: 0 10px;
+            border-radius: 10em;
+            background: #142336;
+        }
+        progress[value]::-webkit-progress-value {
+            border-radius: 10em;
+            background: white;
+        }
+        progress[value]::-moz-progress-bar {
+            border-radius: 15em;
+            background: white;
+        }                  
+        
+        .connect .social a{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            text-decoration: none;
+
+        }
+        .connect .social .detail{
+            margin-left: 20px;
+            color: #a9a9ae;
+            width: 100%;
+            
+        }
+
+        /* content */
+    </style>
+</head>
+<body>
+    <!-- side bar -->
+    <section id="side-bar">
+        <div class="container">
+          <div class="wrapper">
+            <div class="avatar title-top">
+                <div class="avatar-image poligon">
+                    <img src="./anh-cv-07.jpg" alt="">
+                </div>
+                <h3 class="name">Lap Nguyễn</h3>
+                <h4 class="job-position">Art Director</h3>
+            </div>
+            <div class="profile title-top">
+                <div class="head">
+                    <div class="icon poligon ">
+                        <div class="poli-icon">
+                            <i  class="fas  fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3 >Profile</h3>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="content">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+            </div>
+            <div class="contact title-top">
+                <div class="head">
+                    <div class="icon poligon">
+                        <div class="poli-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>CONTACT ME</h3>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="content ">
+                   <div class="phone">
+                        <div class="icon poligon">
+                                <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="detail">
+                            <p>+843820047</p>
+                        </div>
+                   </div>
+                    <div class="email">
+                        <div class="icon poligon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="detail">
+                            <p>nguyenhoanglapit@gmail.com</p>
+                        </div>
+                   </div>
+                    <div class="website">
+                        <div class="icon poligon">
+                            <i class="fas fa-globe-europe"></i>
+                        </div>
+                        <div class="detail">
+                            <p>none</p>
+                        </div>
+                   </div>
+                    <div class="address">
+                        <div class="icon poligon">
+                            <i class="fas fa-map-marker-alt"></i>                        </div>
+                        <div class="detail">
+                            <p>16/9 Cao Ba Quat street, Loc Phat Ward, Bao Loc city, Lam Dong province</p>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <div class="skill title-top">
+                <div class="head">
+                    <div class="icon poligon">
+                        <div class="poli-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>PERSONAL SKILLS</h3>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="content">
+                    <ul  class="label">
+                        <li>
+                            <p>INNOVATION</p>
+                        </li>
+                        <li>
+                            <p>CREATIVE</p>
+                        </li>
+                        <li>
+                            <p>TEAMWORK</p>
+                        </li>
+                        <li>
+                            <p>HOBBIES</p>
+                        </li>
+                    </ul>
+                    <ul class="proccess">
+                        <li>
+                            <progress id="file" value="32" max="100"> 32% </progress>
+                        </li>
+                        <li>
+                            <progress id="file" value="32" max="100"> 32% </progress>
+                        </li>
+                        <li>
+                            <progress id="file" value="32" max="100"> 32% </progress>
+                        </li>
+                        <li>
+                            <progress id="file" value="32" max="100"> 32% </progress>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="connect title-top">
+                <div class="head">
+                    <div class="icon poligon">
+                        <div class="poli-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>CONNECT</h3>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="content">
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/lap-nguyen-73211b223/">
+                            <div class="icon poligon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="detail">
+                                <p>https://www.linkedin.com/in/lap-nguyen-73211b223/</p>
+                            </div>
+                        </a>
+                   </div>
+                    <div class="social">
+                        <a href="">
+                            <div class="icon poligon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="detail">
+                                <p>none</p>
+                            </div>
+                        </a>
+                   </div>
+                   
+                    <div class="social">
+                        <a href="https://github.com/lapnguyen331">
+                            <div class="icon poligon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="detail">
+                                <p>https://github.com/lapnguyen331</p>
+                            </div>
+                        </a>
+                     </div>
+                 </div>
+            
+                </div>
+          </div>
+        </div>
+    </section>
+    <!-- main -->
+    <section id="main">
+
+    </section>
+</body>
+</html>
