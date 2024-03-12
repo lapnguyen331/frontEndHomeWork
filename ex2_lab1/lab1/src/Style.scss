@@ -1,0 +1,337 @@
+$color-theme:#e3e3e5;
+$primary-color:#142336;
+$second-color:#fff;
+$para-color:#a9a9ae;
+$title-font-size:20px;
+$title-font-lightweight:400;
+$title-font-boldweight:600;
+$poligon-wrapper-height:60px;
+$poligon-wrapper-width:60px;
+$poligon-top-position:2px;
+$poligon-left-position:2px;
+$small-icon-height:40px;
+$small-icon-width:40px;
+$sidebar-width:30%;
+$content-margin-top:20px;
+$content-margin-bottom:30px;
+
+$poligon-width:$poligon-wrapper-width - 2*$poligon-left-position;
+$poligon-height:$poligon-wrapper-height - 2*$poligon-top-position;
+
+@mixin flex-row{
+  display:flex;
+  flex-direction: row;
+  @content;
+}
+@mixin flex-col{
+  display: flex;
+  flex-direction: column;
+  @content;
+}
+
+/* reset css */
+*{
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body{
+  @include flex-row{};
+  background-color:$color-theme ;
+  height: fit-content;
+  max-width:max-content ;
+
+}
+/* side bar */
+#side-bar{
+  width: $sidebar-width;
+  @include flex-col();
+  min-height: max-content;
+  background-color: $primary-color;
+}
+#side-bar .container,#side-bar .poli-icon, {
+  background-color: $primary-color;
+}
+#side-bar .wrapper{
+  margin-left: 50px;
+  margin-top: 40px;
+}
+.margin-top{
+  margin-top:$content-margin-top;
+}
+.avatar{
+  @include flex-col();
+  align-items: center;
+}
+.avatar-image{
+  width: 150px;
+  height: 150px;
+}
+/* poligon */
+/* thẻ poly gon ngoài */
+.poligon {
+  display: inline-block;
+  position: relative;
+  background: $second-color;
+  box-sizing: border-box;
+  -webkit-clip-path: polygon(92.32051% 40%, 93.79385% 43.1596%, 94.69616% 46.52704%, 95% 50%, 94.69616% 53.47296%, 93.79385% 56.8404%, 92.32051% 60%, 79.82051% 81.65064%, 77.82089% 84.50639%, 75.35575% 86.97152%, 72.5% 88.97114%, 69.3404% 90.44449%, 65.97296% 91.34679%, 62.5% 91.65064%, 37.5% 91.65064%, 34.02704% 91.34679%, 30.6596% 90.44449%, 27.5% 88.97114%, 24.64425% 86.97152%, 22.17911% 84.50639%, 20.17949% 81.65064%, 7.67949% 60%, 6.20615% 56.8404%, 5.30384% 53.47296%, 5% 50%, 5.30384% 46.52704%, 6.20615% 43.1596%, 7.67949% 40%, 20.17949% 18.34936%, 22.17911% 15.49361%, 24.64425% 13.02848%, 27.5% 11.02886%, 30.6596% 9.55551%, 34.02704% 8.65321%, 37.5% 8.34936%, 62.5% 8.34936%, 65.97296% 8.65321%, 69.3404% 9.55551%, 72.5% 11.02886%, 75.35575% 13.02848%, 77.82089% 15.49361%, 79.82051% 18.34936%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+/* bo thẻ div tạo poligon*/
+.poligon img, .poli-icon{
+  position: absolute;
+  -webkit-clip-path: polygon(92.32051% 40%, 93.79385% 43.1596%, 94.69616% 46.52704%, 95% 50%, 94.69616% 53.47296%, 93.79385% 56.8404%, 92.32051% 60%, 79.82051% 81.65064%, 77.82089% 84.50639%, 75.35575% 86.97152%, 72.5% 88.97114%, 69.3404% 90.44449%, 65.97296% 91.34679%, 62.5% 91.65064%, 37.5% 91.65064%, 34.02704% 91.34679%, 30.6596% 90.44449%, 27.5% 88.97114%, 24.64425% 86.97152%, 22.17911% 84.50639%, 20.17949% 81.65064%, 7.67949% 60%, 6.20615% 56.8404%, 5.30384% 53.47296%, 5% 50%, 5.30384% 46.52704%, 6.20615% 43.1596%, 7.67949% 40%, 20.17949% 18.34936%, 22.17911% 15.49361%, 24.64425% 13.02848%, 27.5% 11.02886%, 30.6596% 9.55551%, 34.02704% 8.65321%, 37.5% 8.34936%, 62.5% 8.34936%, 65.97296% 8.65321%, 69.3404% 9.55551%, 72.5% 11.02886%, 75.35575% 13.02848%, 77.82089% 15.49361%, 79.82051% 18.34936%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+/* thẻ polygon trong nhỏ hơn thẻ poligon ngoài 4px lệch trên và trái 2 px  */
+.avatar-image img {
+  top: $poligon-top-position; /* equal to border thickness */
+  left: $poligon-left-position; /* equal to border thickness */
+  width: 146px; /* container height - (border thickness * 2) */
+  height: 146px; /* container height - (border thickness * 2) */
+}
+.job-position , .name{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  color: $second-color;
+  margin-bottom: 5px;
+}
+.job-position{
+  font-size:24px;
+}
+.name{
+  font-size:38px
+}
+.head{
+  @include flex-row{
+    align-items: center;
+  }
+}
+.head .icon{
+  width: $poligon-wrapper-width;
+  height: $poligon-wrapper-height;
+}
+
+
+
+.head .poli-icon{
+  top: 2px; /* equal to border thickness */
+  left: 2px; /* equal to border thickness */
+  width: $poligon-width; /* container height - (border thickness * 2) */
+  height:$poligon-height; /* container height - (border thickness * 2) */
+}
+/* icon decor */
+.head .icon i {
+  position: relative;
+  top: 25%;
+  left: 25%;
+  font-size: 30px;
+}
+#side-bar .head .icon i,#side-bar .title{
+  color: $second-color;
+}
+#side-bar .content i,#main .icon i, #main .title, #side-bar .head .icon {
+  color: $primary-color;
+}
+#main .head .icon{
+  background-color: $primary-color;
+}
+.head .poli-icon{
+  background-color: $color-theme;
+}
+
+.title h3{
+  font-weight: $title-font-lightweight;
+}
+#main .title h3{
+  font-weight: $title-font-boldweight;
+}
+.line{
+  margin-left: 10px;
+  height: 50%;
+}
+#side-bar .line{
+  border-bottom: 3px solid $color-theme;
+}
+
+.profile .line{
+  width: 60%;
+}
+.contact .line{
+  width: 45%;
+}
+.skill .line{
+  width: 33%;
+}
+.connect .line{
+  width: 55%;
+}
+
+#side-bar .content{
+  margin-top: $content-margin-top;
+  margin-bottom: $content-margin-bottom;
+  margin-left: 28px;
+  font-size: 17px;
+  color: $para-color;
+}
+
+.phone, .email,.website,.address,.social{
+  @include flex-row();
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+}
+.content .icon{
+  width: $small-icon-width;
+  height: $small-icon-height;
+  background-color: $second-color;
+}
+
+.content .icon i{
+  position: relative;
+  top: 20%;
+  left: 25%;
+  font-size: 25px;
+  width:100%;
+  height: 100%;
+  color: $primary-color;
+}
+
+.contact .detail{
+  margin-left: 20px;
+  font-size: 17px;
+  color: $para-color;
+  width: 90%;
+}
+
+.skill .content li {
+  margin-bottom: 10px;
+}
+.skill .proccess{
+  list-style: none;
+  width: 50%;
+}
+/* disable default progress tag css of browser */
+progress[value] {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance: none;
+}
+.skill  progress[value] {
+  border: none;
+  width: 100%;
+  height: 10px;
+  margin: 0 10px;
+  border-radius: 10em;
+  background: $primary-color;
+}
+#side-bar progress[value]::-webkit-progress-value {
+  border-radius: 10em;
+  background: $second-color;
+}
+#side-bar progress[value]::-moz-progress-bar {
+  border-radius: 15em;
+  background: $second-color;
+}
+
+.connect .social a{
+  @include flex-row();
+  width: 100%;
+  text-decoration: none;
+
+}
+.connect .social .detail{
+  margin-left: 20px;
+  color: $para-color;
+  width: 100%;
+
+}
+/* main */
+#main{
+  width: 60%;
+  @include flex-col();
+  height: fit-content;
+}
+#main .container{
+  margin-left: 30px;
+}
+#main .content {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 28px;
+  font-size: 17px;
+  color: $primary-color;
+
+}
+#main .col {
+  @include flex-col();
+}
+#main .row ,.skill .content{
+  @include flex-row();
+}
+#main .item{
+  padding-bottom: 10px;
+}
+#main .item h3{
+  font-size:$title-font-size ;
+}
+#main .item span{
+  font-weight: $title-font-lightweight;
+  margin-left: 10px;
+}
+#main li::marker{
+  font-size: 30px;
+}
+#main .detail{
+  font-size: 16px;
+  padding-top: 5px;
+  height: fit-content;
+}
+#main .line{
+  border-bottom: 3px solid $primary-color;
+}
+#main .line{
+  width: 65%;
+}
+
+#main .prof-skill .line{
+  width: 60%;
+}
+#main .education .line{
+  width: 80%;
+}
+#main .profit .line{
+  width: 75%;
+}
+.no-list-style{
+  list-style: none;
+  margin-top: 10px;
+}
+.progress{
+
+}
+.width-100{
+  width: 100%;
+}
+.width-50{
+  width:50%;
+}
+#main .label{
+  font-size: 14px;
+}
+.progress  progress[value] {
+  border: none;
+  width: 100%;
+  height: 12px;
+  margin: 0 10px;
+  border-radius: 10em;
+  background: $color-theme;
+}
+#main progress[value]::-webkit-progress-value {
+  border-radius: 10em;
+  background: $primary-color;
+}
+#main progress[value]::-moz-progress-bar {
+  border-radius: 15em;
+  background: $color-theme;
+}
