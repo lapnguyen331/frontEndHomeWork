@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,100;1,200;1,300&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="row">
+            <!-- <input type="checkbox" hidden class="check-sidebar" name="" id="check-sidebar">
+            <input type="checkbox" hidden class="check-notification" name="" id="check-notification"> -->
+            <div class="sidebar">
+                <div class="sidebar__main">
+                    <!-- <div class="sidebar__logo">
+                        <div class="sidebar__logo-mobile">
+                            <div class="sidebar__logo-image">
+                                <img class="sidebar__logo-image-v" src="./image/logo.jpg" alt="">
+                                <div class="sidebar__logo-title">OneTech</div>
+                            </div>
+                            <div class="sidebar__logo-close">
+                                <label for="check-sidebar"> <i class="far fa-times-circle"></i></label>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="sidebar__dashboard">
+                        <div class="sidebar__dashboard-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="sidebar__dashboard-title">
+                            Dashboard
+                        </div>
+                    </div>
+                    <div class="sidebar__analyst">
+                        <div class="sidebar__analyst-icon">
+                            <i class="fas fa-adjust"></i>
+                        </div>
+                        <div class="sidebar__analyst-title">
+                            Analyst
+                        </div>
+                    </div>
+                    <div class="sidebar__ecommerce">
+                        <div class="sidebar__ecommerce-icon">
+                            <i class="fas fa-adjust"></i>
+                        </div>
+                        <div class="sidebar__ecommerce-title">
+                            eCommerce
+                        </div>
+                       
+                    </div>
+                    <div class="sidebar__title">ADD</div>
+                    <div class="sidebar__ui-down">
+                        <div class="sidebar__ui-title">
+                            <i class="far fa-envelope"> Email</i>
+                        </div>
+                    </div>
+                    <div class="sidebar__ui-down">
+                        <div class="sidebar__ui-title">
+                            <i class="far fa-comment-alt"> Chat</i>
+                        </div>
+                    </div>
+                    <div class="sidebar__ui-down">
+                        <div class="sidebar__ui-title">
+                            <i class="far fa-check-square"> Todo</i>
+                        </div>
+                    </div>
+                    <div class="sidebar__ui-down">
+                        <div class="sidebar__ui-title">
+                            <i class="far fa-calendar-alt"> Calendar</i>
+                        </div>
+                    </div>
+                    <div class="sidebar__title">UI</div>
+                    <input type="checkbox" name="" hidden class="sidebar__grid-check" id="sidebar__grid-ckeck">
+                    <!-- <div class="sidebar__grid"> -->
+                    <label for="sidebar__grid-ckeck" class="sidebar__ui-grid">
+                        <div class="sidebar__ui-title">
+                            <i class="fas fa-border-all"> Grid</i>
+                        </div>
+                        <div class="sidebar__ui-icon">
+                            >
+                        </div>
+                        <div class="sidebar__ui-icon-down">
+                            v
+                        </div>
+                    </label>
+                    <ul class="sidebar_children">
+                        <li>
+                            <div class="sidebar__ui-grid">
+                                <div class="sidebar__ui-title">
+                                    <i class="far fa-smile-wink"> Grid 1</i>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sidebar__ui-grid">
+                                <div class="sidebar__ui-title">
+                                    <i class="far fa-smile-wink"> Grid 2</i>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sidebar__ui-grid">
+                                <div class="sidebar__ui-title">
+                                    <i class="far fa-smile-wink"> Grid 3</i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- </div> -->
+                    <div class="sidebar__ui-down">
+                        <div class="sidebar__ui-title">
+                            <i class="fas fa-tint"> Color</i>
+                        </div>
+                    </div>
+                    <div class="sidebar__ui-down">
+                        <div class="sidebar__ui-title">
+                            <i class="far fa-credit-card"> Cart</i>
+                        </div>
+                        <div class="sidebar__ui-icon">
+                            >
+                        </div>
+                    </div>
+                    <div class="sidebar__ui-down">
+                        <div class="sidebar__ui-title">
+                            <i class="fas fa-table"> Table</i>
+                        </div>
+                    </div>
+                    <div class="sidebar__ui-down">
+                        <div class="sidebar__ui-title">
+                            <i class="fas fa-igloo"> Component</i>
+                        </div>
+                        <div class="sidebar__ui-icon">
+                            >
+                        </div>
+                    </div>
+                    <div class="sidebar__title">FORM</div>
+                    <div class="sidebar__ui-down">
+                        <div class="sidebar__ui-title">
+                            <i class="fas fa-mail-bulk"> Form Elements</i>
+                        </div>
+                        <div class="sidebar__ui-icon">
+                            >
+                        </div>
+                    </div>
+                    <div class="sidebar__ui-down">
+                        <div class="sidebar__ui-title">
+                            <i class="far fa-square"> Form Layouts</i>
+                        </div>
+                    </div>
+                    <div class="sidebar__ui-down">
+                        <div class="sidebar__ui-title">
+                            <i class="far fa-file"> Form Wizard</i>
+                        </div>
+                    </div>
+                    <div class="sidebar__ui-down">
+                        <div class="sidebar__ui-title">
+                            <i class="far fa-check-circle"> Validation </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="notification">
+                <div class="notification__new">
+                    <div class="notification__new-count">
+                        5 New
+                    </div>
+                    <div class="notification__new-app">
+                        App Notifications
+                    </div>
+                </div>
+                <div class="notification__new__info">
+                    <a href="" class="notification__new__info-title">
+                        <i class="far fa-comment-alt"></i>
+                        <div class="notification__new__info-name">
+                            New message
+                            <div class="notification__new__info-description">Are your going meet tonight </div>
+                        </div>
+                    </a>
+                    <div class="notification__new__info-time">
+                        10 sec ago
+                    </div>
+                </div>
+                <hr>
+                <div class="notification__new__info">
+                    <a href="" class="notification__new__info-title-error">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div class="notification__new__info-name">
+                            Error
+                            <div class="notification__new__info-description">Are your going meet tonight </div>
+                        </div>
+                    </a>
+                    <div class="notification__new__info-time">
+                        10 sec ago
+                    </div>
+                </div>
+                <hr>
+                <div class="notification__new__info">
+                    <a href="" class="notification__new__info-title">
+                        <i class="far fa-comment-alt"></i>
+                        <div class="notification__new__info-name">
+                            New message
+                            <div class="notification__new__info-description">Are your going meet tonight </div>
+                        </div>
+                    </a>
+                    <div class="notification__new__info-time">
+                        10 sec ago
+                    </div>
+                </div>
+                <hr>
+                <div class="notification__new__info">
+                    <a href="" class="notification__new__info-title-mail">
+                        <i class="far fa-envelope"></i>
+                        <div class="notification__new__info-name">
+                            New mail
+                            <div class="notification__new__info-description">Are your going meet tonight </div>
+                        </div>
+                    </a>
+                    <div class="notification__new__info-time">
+                        10 sec ago
+                    </div>
+                </div>
+            </div> -->
+            <div class="content">
+                <div class="container">
+                    <div class="content__sidebar-top">
+                        <div class="content__sidebar-left">
+                            <div class="content__sidebar-left-list">
+                                <i class="far fa-check-square"></i>
+                                <i class="far fa-comment-alt"></i>
+                                <i class="far fa-envelope"></i>
+                                <i class="far fa-calendar-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <label for="check-sidebar"><i class="fas fa-bars"></i></label>
+                        </div>
+                        <div class="content__sidebar-right">
+                            <div class="content__sidebar-english">
+                                English
+                            </div>
+                            <img class="flag" src="./image/flag.png" alt="">
+                            <a href="" class="notification_bell">
+                             <i class="far fa-bell"></i>
+                                <span class="notification_bell-number">6</span>
+                            </a>
+                            <a href="" class="notification_cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="notification_cart-number">5</span>
+                            </a>
+                            <i class="far fas fa-search"></i>
+                            <label for="check-user" class="content__sidebar-user">
+                                <input type="checkbox" hidden class="check-user" name="" id="check-user">
+                                <div class="content__sidebar-user-name">
+                                    John
+                                    <div class="content__sidebar-user-gender">
+                                        men
+                                    </div>
+                                </div>
+                                <img class="content__sidebar-user-image"
+                                    src="./image/b48e1609dcdba1ca2cfaa83d52194aa7.jpg" alt="">
+                                <div class="user">
+                                    <div class="user_information">
+                                        <div class="user_information-list">
+                                            <i class="far fa-user"> Profile</i>
+                                        </div>
+                                        <div class="user_information-list">
+                                            <i class="far fa-envelope"> Inbox</i>
+                                        </div>
+                                        <div class="user_information-list">
+                                            <i class="far fa-check-square"> Tasks</i>
+                                        </div>
+                                        <div class="user_information-list">
+                                            <i class="far fa-comment-alt"> Chat</i>
+                                        </div>
+                                        <div class="user_information-list">
+                                            <i class="far fa-heart"> Wish List</i>
+                                        </div>
+                                        <hr>
+                                        <div class="user_information-list">
+                                            <i class="fas fa-sign-out-alt"> Logout</i>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="content__shop">Shop</div>
+                    <div class="content__category">
+                        <i class="fas fa-bars"></i>
+                        <div class="content_featured">
+                            Featured
+                            <div class="content_featured-down">v</div>
+                        </div>
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <div class="content_search">
+                        <input type="text" class="content_search-input" placeholder="Search here">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="content__checkout">
+                        <div class="content__checkout__left">
+                            <div class="content__checkout-title">
+                                Checkout
+                            </div>
+                            <i class="fas fa-home"></i>
+                            <div class="content__checkout-step">
+                                >>
+                            </div>
+                            <div class="content__checkout-ecommerce">
+                                eCommerce
+                            </div>
+                            <div class="content__checkout-step">
+                                >>
+                            </div>
+                            <div class="content__checkout-checkout">
+                                Checkout
+                            </div>
+                        </div>
+                        <div class="content__setting">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                    </div>
+                    <input type="checkbox" name="" hidden class="content__process-check-2" id="content__process-check-2">
+                    <div class="content__process">
+                        <div class="content__process-one">
+                            <div class="content__process-number-one">1</div>
+                        </div>
+                        <div class="content__process-step"></div>
+                        <label for="content__process-check-2" class="content__process-two">
+                            <div class="content__process-number-two">2</div>
+                        </label>
+                        <div class="content__process-three">
+                            <div class="content__process-number-three">3</div>
+                        </div>
+                    </div>
+                    <div class="content__txt" style="display: none;">
+                        <h1>Hello</h1>
+                    </div>
+                    <div class="content__product">
+                        <div class="content__main__product">
+                            <div class="content__product-detail">
+                                <div class="content__product-image">
+                                    <img class="product-image" src="data:image/jpeg;base64,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" alt="">
+                                </div>
+                                <div class="content__product-description">
+                                    <div class="product-name">Apple Watch Series 4 GPS</div>
+                                    <div class="product-description">đẳng cấp từ tên gọi đến từng chi tiết...</div>
+                                    <div class="product_info">
+                                        By <a class="product-by" href="">Apple</a>
+                                        <div class="product-stock">
+                                            In stock
+                                        </div>
+                                        <div class="product-quantity">
+                                            Quantity
+                                        </div>
+                                        <div class="product-quantity-id">
+                                            <div class="product-quantity-decrease">-</div>
+                                            <div class="product-quantity-number">8</div>
+                                            <div class="product-quantity-increase">+</div>
+                                        </div>
+                                        <div class="product-date">
+                                            Delivery by, Sat Mar 23
+                                        </div>
+                                        <div class="product-discount">
+                                            17% Off 4 Offers Available
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__product-action">
+                                    <div class="content__product-action-list">
+                                        <div class="content__product-amount">
+                                            <div class="product-amount">
+                                                <div class="product-amount-start-l">
+                                                </div>
+                                                <div class="product-amount-start">
+                                                    34 <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <div class="product-price">
+                                                $399
+                                            </div>
+                                        </div>
+                                        <div class="product-free">
+                                            <i class="fas fa-shopping-cart"></i> Free Shipping
+                                        </div>
+                                        <div class="product-remove">
+                                            <i class="fas fa-times"></i> REMOVE
+                                        </div>
+                                        <div class="product_action">
+                                            <div class="product-wishlist">
+                                                <i class="far fa-star"></i> MOVE TO WISHLIST
+                                            </div>
+                                            <div class="product-wishlist-head">
+                                                <i class="fas fa-heart"></i> WISHLIST
+                                            </div>
+                                            <div class="product-add-cart">
+                                                <i class="fas fa-archive"></i> ADD TO CART
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__product-detail">
+                                <div class="content__product-image">
+                                    <img class="product-image" src="data:image/jpeg;base64,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" alt="">
+                                </div>
+                                <div class="content__product-description">
+                                    <div class="product-name">Apple Watch Series 4 GPS</div>
+                                    <div class="product-description">đẳng cấp từ tên gọi đến từng chi tiết...</div>
+                                    <div class="product_info">
+                                        By <a class="product-by" href="">Apple</a>
+                                        <div class="product-stock">
+                                            In stock
+                                        </div>
+                                        <div class="product-quantity">
+                                            Quantity
+                                        </div>
+                                        <div class="product-quantity-id">
+                                            <div class="product-quantity-decrease">-</div>
+                                            <div class="product-quantity-number">8</div>
+                                            <div class="product-quantity-increase">+</div>
+                                        </div>
+                                        <div class="product-date">
+                                            Delivery by, Sat Mar 23
+                                        </div>
+                                        <div class="product-discount">
+                                            17% Off 4 Offers Available
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__product-action">
+                                    <div class="content__product-action-list">
+                                        <div class="content__product-amount">
+                                            <div class="product-amount">
+                                                <div class="product-amount-start-l">
+                                                </div>
+                                                <div class="product-amount-start">
+                                                    34 <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <div class="product-price">
+                                                $399
+                                            </div>
+                                        </div>
+                                        <div class="product-free">
+                                            <i class="fas fa-shopping-cart"></i> Free Shipping
+                                        </div>
+                                        <div class="product-remove">
+                                            <i class="fas fa-times"></i> REMOVE
+                                        </div>
+                                        <div class="product_action">
+                                            <div class="product-wishlist">
+                                                <i class="far fa-star"></i> MOVE TO WISHLIST
+                                            </div>
+                                            <div class="product-wishlist-head">
+                                                <i class="fas fa-heart"></i> WISHLIST
+                                            </div>
+                                            <div class="product-add-cart">
+                                                <i class="fas fa-archive"></i> ADD TO CART
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__product-detail">
+                                <div class="content__product-image">
+                                    <img class="product-image" src="./image/iphone-12-1_j388-44_769m-ed.png" alt="">
+                                </div>
+                                <div class="content__product-description">
+                                    <div class="product-name">Apple Watch Series 4 GPS</div>
+                                    <div class="product-description">đẳng cấp từ tên gọi đến từng chi tiết...</div>
+                                    <div class="product_info">
+                                        By <a class="product-by" href="">Apple</a>
+                                        <div class="product-stock">
+                                            In stock
+                                        </div>
+                                        <div class="product-quantity">
+                                            Quantity
+                                        </div>
+                                        <div class="product-quantity-id">
+                                            <div class="product-quantity-decrease">-</div>
+                                            <div class="product-quantity-number">8</div>
+                                            <div class="product-quantity-increase">+</div>
+                                        </div>
+                                        <div class="product-date">
+                                            Delivery by, Sat Mar 23
+                                        </div>
+                                        <div class="product-discount">
+                                            17% Off 4 Offers Available
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__product-action">
+                                    <div class="content__product-action-list">
+                                        <div class="content__product-amount">
+                                            <div class="product-amount">
+                                                <div class="product-amount-start-l">
+                                                </div>
+                                                <div class="product-amount-start">
+                                                    34 <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <div class="product-price">
+                                                $399
+                                            </div>
+                                        </div>
+                                        <div class="product-free">
+                                            <i class="fas fa-shopping-cart"></i> Free Shipping
+                                        </div>
+                                        <div class="product-remove">
+                                            <i class="fas fa-times"></i> REMOVE
+                                        </div>
+                                        <div class="product_action">
+                                            <div class="product-wishlist">
+                                                <i class="far fa-star"></i> MOVE TO WISHLIST
+                                            </div>
+                                            <div class="product-wishlist-head">
+                                                <i class="fas fa-heart"></i> WISHLIST
+                                            </div>
+                                            <div class="product-add-cart">
+                                                <i class="fas fa-archive"></i> ADD TO CART
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__cart">
+                            <div class="content__cart-list">
+                                <div class="content__cart-option">
+                                    Options
+                                    <div class="content__cart-options">
+                                        <div class="content__cart-coupon">
+                                            Coupons
+                                        </div>
+                                        <a class="content__cart-apply" href="">Apply</a>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="content__cart-price-detail">
+                                    Price Details
+                                    <div class="content__cart-price-details">
+                                        <div class="content__cart-total">
+                                            Total MRP
+                                        </div>
+                                        <div class="content__cart-total-mrp">
+                                            $598
+                                        </div>
+                                    </div>
+                                    <div class="content__cart-price-details">
+                                        <div class="content__cart-total">
+                                            Bag Discount
+                                        </div>
+                                        <div class="content__cart-total-bag">
+                                            -$25
+                                        </div>
+                                    </div>
+                                    <div class="content__cart-price-details">
+                                        <div class="content__cart-total">
+                                            Estimated Tax
+                                        </div>
+                                        <div class="content__cart-total-estimated">
+                                            $1.3
+                                        </div>
+                                    </div>
+                                    <div class="content__cart-price-details">
+                                        <div class="content__cart-total">
+                                            EMI Eligibility
+                                        </div>
+                                        <a href="" class="content__cart-total-emi">Details </a>
+                                    </div>
+                                    <div class="content__cart-price-details">
+                                        <div class="content__cart-total">
+                                            Delivery Charges
+                                        </div>
+                                        <div class="content__cart-total-delivery">
+                                            Free
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="content__cart-price-details">
+                                        <div class="content__cart-totals">
+                                            Totle
+                                        </div>
+                                        <div class="content__cart-total-totals">
+                                            $574.3
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__cart-order">
+                                    PLEASE ORDER
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
