@@ -330,16 +330,20 @@
                     </div>
                     <input type="checkbox" name="" hidden class="content__process-check-2" id="content__process-check-2">
                     <div class="content__process">
-                        <div class="content__process-one">
+                        <div class="content__process-one" >
                             <div class="content__process-number-one">1</div>
                         </div>
-                        <div class="content__process-step"></div>
-                        <label for="content__process-check-2" class="content__process-two">
+                        <div class="content__process-step active" ></div>
+                        <label for="content__process-check-2" class="content__process-two" >
                             <div class="content__process-number-two">2</div>
                         </label>
-                        <div class="content__process-three">
+                        <div class="content__process-step " style="display: none;"></div>
+
+                        <div class="content__process-three"  >
                             <div class="content__process-number-three">3</div>
                         </div>
+                        <div class="content__process-step " style="display: none;"></div>
+
                     </div>
                     <div class="content__txt" style="display: none;">
                         <h1>Hello</h1>
@@ -352,7 +356,7 @@
                                 </div>
                                 <div class="content__product-description">
                                     <div class="product-name">Apple Watch Series 4 GPS</div>
-                                    <div class="product-description">đẳng cấp từ tên gọi đến từng chi tiết...</div>
+                                    <div class="product-description" style="display: none;">đẳng cấp từ tên gọi đến từng chi tiết...</div>
                                     <div class="product_info">
                                         By <a class="product-by" href="">Apple</a>
                                         <div class="product-stock">
@@ -612,5 +616,6 @@
     </div>
     </div>
 </body>
-
+<script src="jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
 </html>
